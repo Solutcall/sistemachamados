@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados - Sua Empresa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100px;
+        }
+        .chamado {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+        .chamado h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo da Empresa">
+    <h1>Bem-vindo à Sua Empresa</h1>
+</header>
+
+<div class="chamado">
+    <h2>Abrir Chamado</h2>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="tipo">Tipo de Chamado:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="sugestao">Sugestão</option>
+            <option value="observacao">Observação</option>
+            <option value="reclamacao">Reclamação</option>
+        </select><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+        <input type="button" value="Enviar" onclick="alert('Chamado enviado!');">
+    </form>
+</div>
+
+<div class="chamado">
+    <h2>Acompanhar Chamado</h2>
+    <form>
+        <label for="numero_chamado">Número do Chamado:</label>
+        <input type="text" id="numero_chamado" name="numero_chamado" required>
+        <input type="button" value="Buscar" onclick="alert('Status: Em análise');">
+    </form>
+</div>
+
+</body>
+</html>
